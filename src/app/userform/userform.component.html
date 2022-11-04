@@ -1,0 +1,12 @@
+<div class="card">
+  <div class="card-body">
+    <form #userForm="ngForm" (submit)="onSubmit(userForm)">
+      Name: <input type="text" name="name" ngModel><br><br>
+      Email: <input type="text" name="email" ngModel><br><br>
+      MobileNo: <input type="number" name="mno" ngModel><br><br>
+      Age: <input type="number" name="age" ngModel><br><br>
+      Address: <input type="text" name="address" ngModel><br><br>
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</div>

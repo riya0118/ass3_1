@@ -1,16 +1,22 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BasicOperationComponent } from './basic-operation/basic-operation.component';
+import { UserformComponent } from './userform/userform.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BasicOperationComponent,
+    UserformComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

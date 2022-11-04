@@ -1,0 +1,31 @@
+<div class="content-wrapper">
+  <div class="row">
+    <div class="col-md-6">Integer Value - {{ num1 }}</div>
+    <div class="col-md-6">String Value - {{ name }}</div>
+    <div class="col-md-6">Date Value - {{ dob | date }}</div><br>
+
+    List of arrays in html list:
+    <div class="col-md-6" *ngFor="let item of array1">
+      {{ item }}
+    </div>
+  </div><br>
+
+  <div class="col-md-6">
+    Displaying array in combo:
+    <select name="array">
+      <option value="--select--" selected>--select--</option>
+      <option value="items" *ngFor="let item of array1">{{ item }}</option>
+    </select>
+  </div><br>
+
+  <div class="col-md-6">
+    <select name="combo" [(ngModel)]="selectedItem">
+      <option value="--select--" selected>--select--</option>
+      <option value="textbox">TextBox</option>
+      <option value="textarea">TextArea</option>
+    </select>
+  </div><br>
+
+  <input type="text" name="textbox" *ngIf="selectedItem == 'textbox'"><br><br>
+  <textarea name="textarea" cols="30" rows="10" *ngIf="selectedItem == 'textarea'"></textarea>
+</div>
