@@ -1,16 +1,16 @@
 <div class="content-wrapper">
   <div class="row">
-    <div class="col-md-6">Integer Value - {{ num1 }}</div>
-    <div class="col-md-6">String Value - {{ name }}</div>
-    <div class="col-md-6">Date Value - {{ dob | date }}</div><br>
+    <div>Integer Value - {{ num1 }}</div>
+    <div>String Value - {{ name }}</div>
+    <div>Date Value - {{ dob | date }}</div><br>
 
     List of arrays in html list:
-    <div class="col-md-6" *ngFor="let item of array1">
+    <div *ngFor="let item of array1">
       {{ item }}
     </div>
   </div><br>
 
-  <div class="col-md-6">
+  <div>
     Displaying array in combo:
     <select name="array">
       <option value="--select--" selected>--select--</option>
@@ -18,7 +18,7 @@
     </select>
   </div><br>
 
-  <div class="col-md-6">
+  <div>
     <select name="combo" [(ngModel)]="selectedItem">
       <option value="--select--" selected>--select--</option>
       <option value="textbox">TextBox</option>
