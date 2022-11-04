@@ -8,5 +8,15 @@
       Address: <input type="text" name="address" ngModel><br><br>
       <input type="submit" value="Submit">
     </form>
+
+    <div class="cotainer" *ngIf="userForm.value.name != '' && userForm.value.email != '' && userForm.value.mno != '' && userForm.value.age != '' && userForm.value.address != ''">
+      <div class="row">
+        Name: {{userForm.value.name}} <br>
+        Email: {{userForm.value.email}} <br>
+        MobileNo: {{userForm.value.mno}} <br>
+        Age: {{userForm.value.age}} <br>
+        Address: {{userForm.value.address}} <br>
+      </div>
+    </div>
   </div>
 </div>
